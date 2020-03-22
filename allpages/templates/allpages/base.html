@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% if title %}
+            {{ title }}
+        {% else %}
+            Welcome to the angle academy!
+        {% endif %}
+        
+    </title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="{% static 'allpages/css/stylesheet.css' %}">
+    <!-- favicon png //  favicon.io -->
+    <link  href="{% static 'allpages/images/favicon.ico' %}" rel="shortcut icon" type="image/png">
+    {% block headcontent %}
+    {% endblock headcontent %}
+</head>
+<body>
+    <header>
+        <img src="{% static 'allpages/images/logo.png' %}" alt="Logo">
+        Header
+    </header>
+    <nav>
+
+        <a href="{% url 'allpages-home' %}">Home</a>
+        <a href="{% url 'allpages-about' %}">About</a>
+        <a href="{% url 'allpages-privacy' %}">Privacy</a>
+
+    </nav>
+
+    <main>
+        {% block maincontent %}
+        {% endblock maincontent %}
+
+    </main>
+    <footer>
+
+        <h3>Follow me on social media</h3>
+        <a href="https://www.facebook.com/angleproducts" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/KamelAltohamy"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UC8ATYT0vE3AAn0aT5FlJdKw"><i class="fa fa-linkedin"></i></a>
+    </footer>   
+</body>
+</html>

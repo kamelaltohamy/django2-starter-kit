@@ -1,0 +1,127 @@
+/*  SITE WIDE  STYLE SHEET */
+
+
+/* Google Fonts (optional) */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro|Source+Sans+Pro&display=swap');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Source Sans Pro', sans-serif;
+
+dark color: #ff69A5; black
+light color: #FFCBF6; silver
+
+*/
+
+
+/*fade in animation*/
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    /*background-color: yellow;*/
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+h1,h2,h3 {
+    margin: 1rem 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;;
+}
+
+header, nav, footer {
+    position: fixed;
+    z-index: 31000;
+    left: 0;
+    width: 100%;
+    padding: 0 4%;
+}
+header {
+    top: 0;
+    left: 0;
+    height: 60px;
+    line-height: 60px;
+    background-color: black;
+}
+
+header img {
+    height: 70%;
+    position: relative;
+    top: -2px;
+    animation: 1s ease-in 0s 1 fadein;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+    z-index: 32000;
+    text-align: right;
+    border: dashed 1px  red;
+}
+nav a {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left:  1.25em;
+    line-height: 100%;
+}
+
+nav a:link, nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+    color: silver;
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+    z-index: 100;
+    margin: 68px 4rem 4rem 48px;
+    padding: 0 1rem;
+    background: rgba(255,255,255,0.9);
+
+}
+footer {
+    bottom: 10%;
+    height: 10%;
+    line-height: 10%;
+    /*
+    bottom: 0;
+    height: 30px;
+    line-height: 30px;
+    */
+    background-color: black;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+footer a:link, footer a:visited {
+    color: silver;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+footer a:hover, footer a:active {
+    color: white;
+    text-decoration: none;
+}
